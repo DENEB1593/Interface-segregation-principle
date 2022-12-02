@@ -33,4 +33,19 @@ class BusinessRuleEngineTest {
 
   }
 
+  @Test
+  void addAction() {
+    var mockFacts = mock(Facts.class);
+    var businessRuleEngine = new BusinessRuleEngine(mockFacts);
+
+    businessRuleEngine.addAction(facts -> {
+      var jobTitle = facts.getFact("jobTitle");
+      if ("CEO".equals(jobTitle)) {
+        var name = facts.getFact("name");
+        // send mail to target
+      }
+    });
+
+  }
+
 }
