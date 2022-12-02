@@ -38,14 +38,15 @@ class BusinessRuleEngineTest {
     var mockFacts = mock(Facts.class);
     var businessRuleEngine = new BusinessRuleEngine(mockFacts);
 
-    businessRuleEngine.addAction(facts -> {
-      var jobTitle = facts.getFact("jobTitle");
-      if ("CEO".equals(jobTitle)) {
-        var name = facts.getFact("name");
-        // send mail to target
-      }
-    });
+    Condition condition = (facts) -> "CEQ".equals(facts.getFact("jobTitle"));
+    Action action = (facts) -> {
+      var name = facts.getFact("name");
+      System.out.println("send mail to " + name);
+    };
 
+    // condition, action 도메인 분리 -> 결합해 rule 생성
+    Rule rule = new DefaultRule(condition, action);
   }
+
 
 }
