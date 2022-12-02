@@ -10,9 +10,9 @@ class BusinessRuleEngineTest {
 
   @Test
   void shouldCountWithTwoActions() {
-    Facts mockFacts = mock(Facts.class);
-    Action mockAction = mock(Action.class);
-    BusinessRuleEngine businessRuleEngine = new BusinessRuleEngine(mockFacts);
+    var mockFacts = mock(Facts.class);
+    var mockAction = mock(Action.class);
+    var businessRuleEngine = new BusinessRuleEngine(mockFacts);
 
     businessRuleEngine.addAction(mockAction);
     businessRuleEngine.addAction(mockAction);
@@ -22,9 +22,9 @@ class BusinessRuleEngineTest {
 
   @Test
   void shouldPerformAnActionWithFacts() {
-    Action mockAction = mock(Action.class);
-    Facts mockFacts = mock(Facts.class);
-    BusinessRuleEngine businessRuleEngine = new BusinessRuleEngine(mockFacts);
+    var mockAction = mock(Action.class);
+    var mockFacts = mock(Facts.class);
+    var businessRuleEngine = new BusinessRuleEngine(mockFacts);
 
     businessRuleEngine.addAction(mockAction);
     businessRuleEngine.run();

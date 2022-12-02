@@ -1,6 +1,7 @@
 package io.study;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 public class Customer {
   private String name;
@@ -21,7 +22,7 @@ public class Customer {
 
   @Override
   public String toString() {
-    return new ToStringBuilder(this)
+    return new ToStringBuilder(this, ToStringStyle.JSON_STYLE)
       .append("name", name)
       .append("jobTitle", jobTitle)
       .toString();
