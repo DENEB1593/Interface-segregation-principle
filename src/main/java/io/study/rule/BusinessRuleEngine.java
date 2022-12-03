@@ -1,4 +1,4 @@
-package io.study;
+package io.study.rule;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,8 +1,8 @@
 package io.study;
 
+import io.study.rule.Rule;
+import io.study.rule.RuleBuilder;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class RuleBuilderTest {
 

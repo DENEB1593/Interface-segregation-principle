@@ -1,4 +1,4 @@
-package io.study;
+package io.study.rule;
 
 @FunctionalInterface
 public interface Rule {

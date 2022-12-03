@@ -1,4 +1,7 @@
-package io.study;
+package io.study.rule;
+
+import io.study.rule.component.Action;
+import io.study.rule.component.Condition;
 
 public class DefaultRule implements Rule {
 

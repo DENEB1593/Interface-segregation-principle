@@ -1,4 +1,7 @@
-package io.study;
+package io.study.rule;
+
+import io.study.rule.component.Action;
+import io.study.rule.component.Condition;
 
 import java.util.Objects;
 
@@ -16,6 +19,7 @@ public class RuleBuilder {
   }
 
   public Rule then(Action action) {
+    Objects.requireNonNull(action);
     return new DefaultRule(condition, action);
   }
 

@@ -1,4 +1,4 @@
-package io.study;
+package io.study.rule;
 
 import java.util.HashMap;
 import java.util.Map;
